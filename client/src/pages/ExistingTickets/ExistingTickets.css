@@ -1,0 +1,399 @@
+.ExistingTicketContainer {
+ 
+  border-radius: 8px;
+  background-color: #fff;
+  position: inherit;
+  overflow: hidden;
+}
+
+.TicketContainer {
+  display: flex;
+  flex-direction: column;
+  max-width: 70%;
+  table-layout: fixed; /* Set the table layout to fixed */
+  border-collapse: collapse;
+  margin: 30px 0px 0px 410px;
+}
+
+.TicketTable {
+  flex: 1;
+  max-height: 60vh;
+  overflow: auto;
+  border: 1px solid #ccc;
+  width: 100%;
+  table-layout: fixed;
+}
+
+/* Table styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: inherit;
+  margin-bottom: 20px;
+}
+thead {
+  position: sticky;
+  top: 0;
+ 
+}
+th,
+td {
+  padding: 10px;
+  border-bottom: 1px solid black;
+  word-wrap: break-word; /* Allow long words to break */
+  max-width: 200px; /* Adjust the max-width value as needed */
+  white-space: normal;
+}
+
+th {
+  background-color: #9f524e;
+  font-weight: bold;
+  text-align: left;
+  color: #ffffff;
+}
+
+/* Image styles */
+.Screenshots {
+  max-width: 100%;
+  max-height: 100px;
+  display: block;
+  margin: 5px auto;
+}
+
+/* Header styles */
+.ExistingTicketHeading {
+  font-size: 36px;
+  margin: 10px 0px 0px 370px;
+  color: #9f524e;
+}
+
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  background-color:#9f524e ;
+  padding: 10px 0;
+  bottom: 0;
+  left: 0;
+}
+
+.pagination p {
+  margin: 0 30px;
+  color: #fff;
+}
+
+.pagination button {
+  padding: 0; /* Remove padding to eliminate background */
+  margin: 0 5px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  background-color: transparent; /* Set background to transparent */
+}
+
+.pagination button.disabled {
+  cursor: not-allowed;
+}
+
+/* Style the arrow icons inside the button */
+.pagination button svg {
+  font-size: 14px; /* Adjust the font size as needed */
+  color: #ffffff; /* Set arrow color */
+ 
+}
+
+/* Center the text vertically */
+.pagination button span {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Add hover effect for buttons */
+.pagination button:hover svg {
+  color: #ffffff; /* Change arrow color on hover */
+}
+
+
+
+
+.action-buttons {
+  display: flex;
+  margin: 0px 4px 0px 0px;
+}
+
+.Action-button {
+  background-color: transparent;
+  color: #9f524e;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin: 0px 8px 0px 0px; /* Adjusted margin */
+}
+
+.Action-button svg {
+  margin-right: 5px;
+}
+
+.action-button:focus {
+  outline: none;
+}
+
+/* Style for the slider */
+.column-toggle .slider {
+  width: 50px;
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 10px;
+  position: relative;
+}
+
+.column-toggle .slider:before {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #007bff;
+  transition: 0.2s;
+}
+
+.column-toggle input:checked + .slider:before {
+  transform: translateX(100%);
+}
+
+.column-toggle input:checked + .slider {
+  background-color: #8bc34a;
+}
+
+.columns-switch-container {
+  display: flex;
+  align-items: flex-start;
+  
+  flex-direction: column;
+  background-color: #f7f7f7;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 35px 0px -257px 0px;
+  
+  max-width: 20%;
+  position: relative;
+  
+}
+
+.columns-switch-container .column-toggle {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  flex-direction: row-reverse;
+}
+
+.columns-switch-container .column-toggle span {
+  margin-right: 5px;
+}
+
+.export-dropdown {
+  display: flex;
+  align-items: flex-start;
+  
+  flex-direction: column;
+  background-color: #f7f7f7;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 39px 0px -113px 186px;
+  max-width: 10%;
+  position: relative;
+
+}
+
+.export-dropdown button {
+  display: block;
+  width: 100%;
+  padding: 5px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  text-align: left;
+}
+
+@media print {
+ 
+  .TicketTable {
+    max-height: none; 
+    overflow: visible; 
+    border: none; 
+  }
+
+  .action-buttons,
+  .export-dropdown,
+  .filter-dropdown {
+    display: none;
+  }
+}
+.filter-dropdown {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  background-color: #f7f7f7;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 39.5px 0px -99px 113px;
+  max-width: 50%;
+  position: relative;
+}
+
+.filter-options {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.filter-options select,
+.filter-options input {
+  padding: 8px;
+  margin: 15px 5px 0px 0px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 18vh;
+  
+}
+
+.filter-options button:hover {
+  background-color: #1d9455;;
+}
+
+.FilterResetButton{
+  border: none;
+  background-color: transparent;
+}
+.FilterResetButton svg{
+ margin: 15px 0px 0px 0px;
+  height: 4vh;
+  width: 4vh;
+}
+.FilterApplyButton{
+  margin: 15px 0px 0px 0px;
+  background-color: rgba(16, 89, 44);
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+.existingTicketAction{
+  display: flex;
+  width: 100%;
+  padding: 15px 0;
+}
+.viewTicketButton{
+  background-color: transparent;
+  color: #9f524e;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  
+}
+
+.commentTicketButton{
+  background-color: transparent;
+  color: #9f524e;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.arrowButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.arrowDropdown {
+  display: flex;
+  flex-direction: row;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  position: relative;
+  width: 996px;
+  height: 20vh;
+
+}
+
+.arrowDropdown p {
+  margin: 5px 0;
+}
+
+.arrowTextArea {
+  margin: 10px 0;
+  padding: 5px;
+  border: 1px solid #ccc;
+  resize: vertical;
+  height: 50%;
+}
+
+.arrowDropdown button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.arrowDropdown button:hover {
+  background-color: #0056b3;
+}
+
+.ssNameNumber{
+  display:flex ;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  width: 20%;
+}
+
+.ssNameNumberItem{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ssNameNumberImg{
+  width: 15vh;
+  height: 15vh;
+  display: block;
+  margin: 5px;
+}
+
+.arrowDeptCate{
+  width: 20%;
+  margin: 0px 0px 0px 0px;
+  padding: 5px;
+}
+
+.arrowSumDes{
+  width: 20%;
+  padding: 5px;
+}
+
+.arrowCommentBox{
+  display: flex;
+  flex-direction: column;
+  width:40%;
+  padding: 5px;
+}
+
+.ExistingTicketBellButton{
+  margin: -60px 0px 0px 1400px ;
+  position: fixed;
+  border: none;
+  background-color: transparent;
+  color:rgba(16, 89, 44) ;
+  font-size: 18px;
+  cursor: pointer;
+}

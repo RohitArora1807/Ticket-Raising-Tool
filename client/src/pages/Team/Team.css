@@ -1,0 +1,34 @@
+.role-button{
+    background-color: #f89421;
+    border-radius: 5px;
+    color: white;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 5vh;
+    width: 70%;
+}
+.addMemberButton{
+    margin: 20px 0px 0px 1320px; 
+    background-color: #9f524e;
+    border-radius: 5px;
+    color: white;
+    border: none;
+    height: 7vh;
+    width: 10%;
+    font-size: 18px;
+    cursor: pointer;
+}
+.addMemberButton:hover{
+    margin: 20px 0px 0px 1320px; 
+    background-color: white;
+    border-radius: 5px;
+    color: #9f524e;
+    border: none;
+    height: 7vh;
+    width: 10%;
+    font-size: 18px;
+    cursor: pointer;
+    border:2px solid #9f524e;
+}

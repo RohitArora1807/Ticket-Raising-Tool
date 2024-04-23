@@ -1,0 +1,28 @@
+/* Layout.css */
+
+/* Styles for the layout container */
+.layout-container {
+    display: flex;
+   margin: 0px 0px 0px 0px;
+    
+  }
+  
+  /* Styles for the content container */
+  .content-container {
+    display: flex;
+    flex-direction: row;
+    margin: 25px 0px;
+  }
+  
+  /* Styles for the main content area */
+  .content {
+   display: flex;
+   margin-left: 50px;
+   
+  }
+
+  .topbar-container{
+    width: 100%;
+    padding: 0px 0px;
+  }
+  
